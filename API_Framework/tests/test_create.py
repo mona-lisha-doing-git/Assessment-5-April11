@@ -8,6 +8,11 @@ def test_create():
 
     response = create_api.post_create(payload)
 
-    assert response.status_code == 200, response.status_code
+    assert response.status_code in [200, 201], response.status_code
 
     print(response.status_code)
+
+def test_create_invalid():
+    payload = read_json('test_data/create_data_nv.json')
+    response = create_api.post_create(payload)
+    assert response.status_code not in [200,201], response.status_code
