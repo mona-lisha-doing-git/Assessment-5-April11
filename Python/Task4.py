@@ -1,4 +1,4 @@
-# Q4.
+# Q4. {Extension: Filename1, Filename2, Filename3, ...}
 
 def func():
     dataset = ['amazon.in','gmail.com','python.py','flipkart.com']
